@@ -1,0 +1,8 @@
+#!/bin/bash
+set -euo pipefail
+
+APP_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+COMMAND="$APP_ROOT/Contents/Resources/install.command"
+
+/bin/chmod +x "$COMMAND"
+/usr/bin/open -a Terminal "$COMMAND"

@@ -1,0 +1,11 @@
+# Local build artifacts
+*.app/
+generated/
+
+# macOS
+.DS_Store
+
+# Editor files
+.idea/
+.vscode/
+*.swp

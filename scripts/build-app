@@ -1,0 +1,19 @@
+#!/bin/bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+APP_PATH="$ROOT_DIR/CFORCE HiDPI.app"
+TOOL="$ROOT_DIR/bin/cforce-hidpi"
+
+/bin/rm -rf "$APP_PATH"
+/bin/mkdir -p "$APP_PATH/Contents/MacOS"
+/bin/mkdir -p "$APP_PATH/Contents/Resources"
+/bin/cp "$ROOT_DIR/src/Info.plist" "$APP_PATH/Contents/Info.plist"
+/bin/cp "$ROOT_DIR/src/app-launcher" "$APP_PATH/Contents/MacOS/CFORCE HiDPI"
+/bin/chmod +x "$APP_PATH/Contents/MacOS/CFORCE HiDPI"
+/bin/cp "$TOOL" "$APP_PATH/Contents/Resources/cforce-hidpi"
+/bin/chmod +x "$APP_PATH/Contents/Resources/cforce-hidpi"
+/bin/cp "$ROOT_DIR/src/install.command" "$APP_PATH/Contents/Resources/install.command"
+/bin/chmod +x "$APP_PATH/Contents/Resources/install.command"
+
+echo "$APP_PATH"
