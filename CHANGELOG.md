@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.1.0 - 2026-06-13
+
+### Added
+
+- Adds interactive display selection when multiple displays are connected.
+- Adds `--display-index` for selecting a display from `macos-hidpi list`.
+- Adds aspect-ratio-aware default HiDPI mode presets for 16:10, 16:9, 3:2, 4:3, and 21:9 displays.
+- Adds `bin/macos-hidpi` as the generic command-line entry point.
+
+### Changed
+
+- Renames the generated app from `CFORCE HiDPI.app` to `macOS HiDPI.app`.
+- Keeps `bin/cforce-hidpi` as a compatibility wrapper.
+- Updates documentation to describe the project as a general macOS HiDPI tool instead of a CFORCE-only utility.
+
 ## v1.0.0 - 2026-06-13
 
 Initial public release of CFORCE HiDPI for macOS.

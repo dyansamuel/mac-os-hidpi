@@ -2,13 +2,16 @@
 set -euo pipefail
 
 RESOURCE_DIR="$(cd "$(dirname "$0")" && pwd)"
-TOOL="$RESOURCE_DIR/cforce-hidpi"
+TOOL="$RESOURCE_DIR/macos-hidpi"
 
 clear
-echo "CFORCE HiDPI installer"
+echo "macOS HiDPI installer"
 echo
-echo "This will add HiDPI scaled modes for the CFORCE 2560x1600 display:"
-echo "  2048x1280, 1920x1200, 1800x1125, 1680x1050, 1600x1000, 1440x900, 1280x800"
+echo "This will add HiDPI scaled modes for a display you choose."
+echo "The default modes are inferred from the selected display's native aspect ratio."
+echo
+echo "Connected displays:"
+"$TOOL" list
 echo
 "$TOOL" install
 echo
